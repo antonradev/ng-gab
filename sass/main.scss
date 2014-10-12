@@ -4,32 +4,29 @@
 */
 
 @import 'mixins';
+@import 'colors';
 
-.app-nav {
-    margin: 20px 0;
-    padding: 0;
-    background-color: #f0cf63;
-    overflow: hidden;
-    @include border-radius(3px); 
-    li {
-        float: left;
-        list-style: none;
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #f0cf63;
-            color: #863300;
-            cursor: pointer;
-        }
-        a:hover {
-            background-color: #b95f27;
-            color: #fff;
-            text-decoration: none;
-        }
-        a.active {
-            background-color: #b95f27;
-            color: #fff;
-            text-decoration: none;
-        }
-    }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    @include noisy-background();
+}
+
+@import 'elements/header';
+
+.whitespace {
+    height: 10px;
+}
+
+.posts-container {
+    background-color: $whitie;
+    padding: 20px;
+}
+.sidebar-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.btn, .form-control {
+    @include border-radius(0);
 }

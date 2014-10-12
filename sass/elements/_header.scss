@@ -1,0 +1,24 @@
+header {
+    background-color: $basica;
+    padding: 25px;
+    overflow: hidden;
+    border-bottom: 10px $basica-darker solid;
+    h1 {
+        font-size: 4em;
+        letter-spacing: -2px;
+        font-weight: bold;
+        float: left;
+        display: inline-block;
+        width: 30%;
+        color: $whitie;
+        margin: 0;
+        padding: 0;
+        line-height: none;
+    }
+    .app-description {
+        float: left;
+        width: 68%;
+        color: $whitie;
+        font-size: 1.4em;
+    }
+}
