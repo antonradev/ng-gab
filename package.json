@@ -1,0 +1,30 @@
+{
+  "name": "ng-gab",
+  "version": "0.0.1",
+  "description": "PHP CodeIgniter, CI RestServer and AngularJS application for status posts and comments",
+  "main": "index.html",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonradev/ng-gab"
+  },
+  "keywords": [
+    "angularjs",
+    "codeigniter",
+    "restserver"
+  ],
+  "author": "Anton Radev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonradev/ng-gab/issues"
+  },
+  "homepage": "https://github.com/antonradev/ng-gab"
+}

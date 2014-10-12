@@ -1,0 +1,32 @@
+/* 
+    Created on : Oct 12, 2014, 4:05:57 PM
+    Author     : Anton Radev
+*/
+.app-nav {
+  margin: 20px 0;
+  padding: 0;
+  background-color: #f0cf63;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
+  .app-nav li {
+    float: left;
+    list-style: none; }
+    .app-nav li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f0cf63;
+      color: #863300;
+      cursor: pointer; }
+    .app-nav li a:hover {
+      background-color: #b95f27;
+      color: #fff;
+      text-decoration: none; }
+    .app-nav li a.active {
+      background-color: #b95f27;
+      color: #fff;
+      text-decoration: none; }
+
+/*# sourceMappingURL=main.css.map */
