@@ -60,6 +60,16 @@
                             </fieldset>
                         </form>
                     </div>
+                    
+                    
+                    <div class="whitespace"></div>
+                    
+                    <div class="posts-feed" ng-controller="PostsFeedCtrl">
+                        <div class="post-single" ng-repeat="post in postsFeedArray">
+                            {{post.post_content}}
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="col-md-5 sidebar-container">
                     Right sidebar
