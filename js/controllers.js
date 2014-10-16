@@ -7,6 +7,7 @@ NGGab.controller("DefaultInfoCtrl", function ($scope, $http) {
                 // log error
             });
 });
+
 NGGab.controller("PostsFeedCtrl", function ($scope, $http) {
     $http.get('rest/index.php/api/posts/posts_list/format/json/').
             success(function (postContent, status, headers, config) {
@@ -16,6 +17,17 @@ NGGab.controller("PostsFeedCtrl", function ($scope, $http) {
                 // log error
             });
 });
+
+NGGab.controller("TweetsCtrl", function ($scope, $http) {
+    $http.get('tweets/tweets.php').
+            success(function (postContent, status, headers, config) {
+                $scope.tweetsArray = postContent;
+            }).
+            error(function (data, status, headers, config) {
+                // log error
+            });
+});
+
 
 
 
@@ -31,7 +43,7 @@ NGGab.controller("PostStatusCtrl", function ($scope, $http) {
         var data = $scope.postContent;
         $http.post("rest/index.php/api/posts/post/format/json/", data, config).success(function (data, status, headers) {
             console.log("Post inserted: " + data);
-//            window.location.reload();
+            window.location.reload();
         });
     };
 

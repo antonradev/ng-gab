@@ -26,25 +26,27 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-7 posts-container">
+                <div class="col-md-8 posts-container">
                     <div class="post-form">
                         <h3>Post something here now:</h3>
                         <div class="whitespace"></div>
-                        <form class="form-horizontal" name="postForm" method="post" novalidate ng-controller="PostStatusCtrl">
+                        
+						<form class="form-horizontal" name="postForm" method="post" novalidate ng-controller="PostStatusCtrl">
                             <fieldset>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="status">Status</label>
-                                    <div class="col-md-4">                     
-                                        <textarea class="form-control" id="status" name="post_content" 
-                                                  ng-model="postContent.post_content" required placeholder="Type something now..."></textarea>
+                                    <label class="col-md-3 control-label" for="status">Status</label>
+                                    <div class="col-md-7">                     
+                                        <textarea rows="4" class="form-control" id="status" name="post_content" 
+												  ng-model="postContent.post_content" required placeholder="Type something now..."></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="mood">Mood</label>
+                                    <label class="col-md-3 control-label" for="mood">Mood</label>
                                     <div class="col-md-4">
-                                        <select id="mood" name="post_mood" class="form-control" ng-model="postContent.post_mood">
-                                            <option value="Happy">Happy</option>
+                                        <select name="post_mood" class="form-control" ng-model="postContent.post_mood" ng-options=" " required>
+                                            <option disabled selected value="">Select Mood</option>
+											<option value="Happy">Happy</option>
                                             <option value="Sad">Sad</option>
                                             <option value="Disappointed">Disappointed</option>
                                             <option value="Rushed">Rushed</option>
@@ -53,12 +55,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="post"></label>
+                                    <label class="col-md-3 control-label" for="post"></label>
                                     <div class="col-md-4">
-                                        <button 
-                                            ng-click="InsertPost()"
-                                            type="submit" id="post" name="post" 
-                                            class="btn btn-primary">Post it</button>
+                                        <button ng-disabled="postForm.$invalid"
+												ng-click="InsertPost()"
+												type="submit" id="post" name="post" 
+												class="btn btn-primary">Post it</button>
                                     </div>
                                 </div>
                             </fieldset>
@@ -69,16 +71,28 @@
                     <div class="whitespace"></div>
 
                     <div class="posts-feed" ng-controller="PostsFeedCtrl">
-                        <div class="post-single" ng-repeat="postContent in postsFeedArray">
+                        
+						<div class="post-single" ng-repeat="postContent in postsFeedArray">
                             <h3>{{postContent.post_content}}</h3>
                             <div class="post-date">{{postContent.post_date}}</div>
-                            <div class="post-mood">Mood: {{postContent.post_mood}}</div>
+                            <div class="post-mood">Mood: <span class="label label-info">{{postContent.post_mood}}</span></div>
                         </div>
+						
                     </div>
 
                 </div>
-                <div class="col-md-5 sidebar-container">
-                    Right sidebar
+                <div class="col-md-4 sidebar-container">
+					
+					<div class="tweets-feed" ng-controller="TweetsCtrl">
+						<h3>My Latest Tweets</h3>
+						
+						<div class="tweet" ng-repeat="tweet in tweetsArray">
+							{{tweet.text}}
+						</div>
+						
+					</div>
+					
+					
                 </div>
             </div>
         </div><!-- end div.container -->

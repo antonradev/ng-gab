@@ -26,7 +26,27 @@ body {
     background-color: #f0f0f0;
     padding: 20px;
 }
+.sidebar-container .tweets-feed {
+	
+}
+
+.sidebar-container .tweets-feed h3 {
+	margin: 10px 0 30px 0;
+}
+
+.sidebar-container .tweets-feed .tweet {
+	margin: 0 0 30px 0;
+}
 
 .btn, .form-control {
     @include border-radius(0);
+}
+/* Post box */
+.post-single {
+	margin: 5px 0 30px 0;
+	padding-bottom: 20px;
+	border-bottom: 2px #dedede dotted;
+}
+.post-mood {
+	margin: 7px 0 0 0;
 }
