@@ -35,7 +35,8 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="status">Status</label>
                                     <div class="col-md-4">                     
-                                        <textarea class="form-control" id="status" name="post_content" ng-model="postContent.post_content" required placeholder="Type something now..."></textarea>
+                                        <textarea class="form-control" id="status" name="post_content" 
+                                                  ng-model="postContent.post_content" required placeholder="Type something now..."></textarea>
                                     </div>
                                 </div>
 
@@ -43,10 +44,10 @@
                                     <label class="col-md-4 control-label" for="mood">Mood</label>
                                     <div class="col-md-4">
                                         <select id="mood" name="post_mood" class="form-control" ng-model="postContent.post_mood">
-                                            <option value="1">Happy</option>
-                                            <option value="2">Sad</option>
-                                            <option value="3">Disappointed</option>
-                                            <option value="4">Rushed</option>
+                                            <option value="Happy">Happy</option>
+                                            <option value="Sad">Sad</option>
+                                            <option value="Disappointed">Disappointed</option>
+                                            <option value="Rushed">Rushed</option>
                                         </select>
                                     </div>
                                 </div>
@@ -55,26 +56,26 @@
                                     <label class="col-md-4 control-label" for="post"></label>
                                     <div class="col-md-4">
                                         <button 
-											ng-click="InsertPost()"
-											type="submit" id="post" name="post" 
-											class="btn btn-primary">Post it</button>
+                                            ng-click="InsertPost()"
+                                            type="submit" id="post" name="post" 
+                                            class="btn btn-primary">Post it</button>
                                     </div>
                                 </div>
                             </fieldset>
                         </form>
                     </div>
-                    
-                    
+
+
                     <div class="whitespace"></div>
-                    
+
                     <div class="posts-feed" ng-controller="PostsFeedCtrl">
-                        <div class="post-single" ng-repeat="post in postsFeedArray">
-                            <h3>{{post.post_content}}</h3>
-							<div class="post-date">{{post.post_date}}</div>
-							<div class="post-mood">Mood: {{post.post_mood}}</div>
+                        <div class="post-single" ng-repeat="postContent in postsFeedArray">
+                            <h3>{{postContent.post_content}}</h3>
+                            <div class="post-date">{{postContent.post_date}}</div>
+                            <div class="post-mood">Mood: {{postContent.post_mood}}</div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-md-5 sidebar-container">
                     Right sidebar
