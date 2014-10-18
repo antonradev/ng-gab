@@ -28,9 +28,6 @@ NGGab.controller("TweetsCtrl", function ($scope, $http) {
             });
 });
 
-
-
-
 NGGab.controller("PostStatusCtrl", function ($scope, $http) {
     $scope.postContent = null;
     $scope.InsertPost = function () {

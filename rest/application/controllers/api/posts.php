@@ -33,7 +33,7 @@ class Posts extends REST_Controller {
             $this->response(array('error' => 'Posts could not be found'), 404);
         }
     }
-
+    
     function post_post() {
         $this->posts_model->post_post();
         $this->response("Success", 200); // 200 being the HTTP response code
