@@ -1,0 +1,14 @@
+<header ng-controller="DefaultInfoCtrl">
+    <div class="container">
+        <div class="row">
+            <div ng-repeat="data in dafaultInfoArray">
+                <h1>{{data.app_name}}</h1>
+                <!-- Print result array value without bg-repeat -->
+                <!-- {{dafaultInfoArray[0].app_name}} -->
+                <div class="app-description">
+                    {{data.app_desc}}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
