@@ -3,4 +3,5 @@
 /node_modules/grunt-contrib-sass/
 /.sass-cache
 /node_modules/*
+/nbproject/
 /nbproject/private/
